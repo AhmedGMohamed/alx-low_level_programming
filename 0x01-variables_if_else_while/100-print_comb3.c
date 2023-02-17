@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - print all single digit numbers from 0 to 9 formatted
+ * main - print all possible unique combinations of 2 numbers
  *
  * Return: 0 if the code executes successfully
  */
