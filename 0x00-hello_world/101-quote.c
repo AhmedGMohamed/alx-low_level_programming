@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 /**
  * main - Outputs the required text to stderr without fprintf or fputs
  *
