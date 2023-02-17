@@ -8,7 +8,7 @@ int main(void)
 {
 	char ch = 0x7B, newline = 0x0A;
 
-	while (ch++ != 0x61)
+	while (ch-- != 0x61)
 	{
 		putchar(ch);
 	}
