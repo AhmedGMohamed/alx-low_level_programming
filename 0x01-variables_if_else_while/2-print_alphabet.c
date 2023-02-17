@@ -11,7 +11,7 @@ int main(void)
 	while (ch++ != 0x7A)
 	{
 		putchar(ch);
-		putchar(newline);
 	}
+	putchar(newline);
 	return (0);
 }
