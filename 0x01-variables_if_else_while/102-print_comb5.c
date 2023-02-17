@@ -17,10 +17,13 @@ int main(void)
 	{
 		for (n2 = 0x30; n2 < 0x3A; n2++)
 		{
+			int st = n2 + 1;
+
 			for (n3 = n1; n3 < 0x3A; n3++)
 			{
-				for (n4 = n2 + 1; n4 < 0x3A; n4++)
+				for (n4 = st; n4 < 0x3A; n4++)
 				{
+					st = 0x30;
 					putchar(n1);
 					putchar(n2);
 					putchar(' ');
