@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	char n = 0x2F, nl = 0x0A;
+	int n = 0x2F, nl = 0x0A;
 
 	while (n++ < 0x39)
 	{
