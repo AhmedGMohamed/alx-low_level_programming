@@ -7,6 +7,7 @@
 int main(void)
 {
 	char ch = '0', nl = 0x0A;
+
 	while (ch <= '9')
 	{
 		putchar(ch);
@@ -14,7 +15,7 @@ int main(void)
 	}
 
 	ch = 'a';
-	
+
 	while (ch != 'g')
 	{
 		putchar(ch);
