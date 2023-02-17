@@ -23,7 +23,6 @@ int main(void)
 			{
 				for (n4 = st; n4 < 0x3A; n4++)
 				{
-					st = 0x30;
 					putchar(n1);
 					putchar(n2);
 					putchar(' ');
@@ -38,6 +37,7 @@ int main(void)
 						putchar(' ');
 					}
 				}
+				st = 0x30;
 			}
 		}
 	}
