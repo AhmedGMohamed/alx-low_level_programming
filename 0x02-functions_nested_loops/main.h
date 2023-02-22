@@ -1,5 +1,5 @@
-#ifndef _PUTCHAR
-#define _PUTCHAR
+#ifndef _PUTCHAR_C
+#define _PUTCHAR_C
 
 int _putchar(char c);
 
@@ -53,3 +53,11 @@ int _abs(int n);
 int print_last_digit(int n);
 
 #endif
+
+#ifndef JACK_BAUER_C
+#define JACK_BAUER_C
+
+void jack_bauer(void);
+
+#endif
+
