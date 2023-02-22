@@ -26,10 +26,10 @@ int _abs(int n)
 
 int print_last_digit(int n)
 {
-	int dig;
+	int dig, num;
 
-	n = _abs(n);
-	dig = n % 10;
+	num = _abs(n);
+	dig = num % 10;
 	_putchar(dig + '0');
 	return (dig);
 }
