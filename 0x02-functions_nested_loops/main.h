@@ -61,3 +61,11 @@ void jack_bauer(void);
 
 #endif
 
+#ifndef TIMES_TABLE_C
+#define TIMES_TABLE_C
+
+void _print(int n);
+void times_table(void);
+
+#endif
+
