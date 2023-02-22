@@ -69,3 +69,10 @@ void times_table(void);
 
 #endif
 
+#ifndef ADD_C
+#define ADD_C
+
+int add(int a, int b);
+
+#endif
+
