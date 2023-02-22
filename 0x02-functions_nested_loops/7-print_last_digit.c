@@ -30,6 +30,6 @@ int print_last_digit(int n)
 
 	n = _abs(n);
 	dig = n % 10;
-	_putchar(dig+'0');
+	_putchar(dig + '0');
 	return (dig);
 }
