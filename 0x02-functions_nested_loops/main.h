@@ -40,9 +40,16 @@ int print_sign(int n);
 
 #endif
 
-#ifndef abs_C
-#define abs_C
+#ifndef ABS_C
+#define ABS_C
 
 int _abs(int n);
+
+#endif
+
+#ifndef PRINT_LAST_DIGIT_C
+#define PRINT_LAST_DIGIT_C
+
+int print_last_digit(int n);
 
 #endif
