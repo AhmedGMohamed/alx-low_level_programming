@@ -10,3 +10,10 @@
 int _putchar(char c);
 
 #endif
+
+#ifndef PRINT_ALPHABET_C
+#define PRINT_ALPHABET_C
+
+void print_alphabet(void);
+
+#endif
