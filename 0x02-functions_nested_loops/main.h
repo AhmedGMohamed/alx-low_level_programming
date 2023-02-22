@@ -76,3 +76,10 @@ int add(int a, int b);
 
 #endif
 
+#ifndef PRINT_TO_98_C
+#define PRINT_TO_98_C
+
+void print_to_98(int n);
+
+#endif
+
