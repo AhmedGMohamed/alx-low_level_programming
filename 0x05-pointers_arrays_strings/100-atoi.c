@@ -24,7 +24,10 @@ int _atoi(char *s)
 		else if (s[len] >= '0' && s[len] <= '9')
 		{
 			num = num + (s[len] - '0');
-			num = num * 10;
+			if (s[len + 1] != '\0')
+			{
+				num = num * 10;
+			}
 			st = 1;
 		}
 		else
@@ -36,7 +39,6 @@ int _atoi(char *s)
 		}
 		len++;
 	}
-	num = num / 10;
 	if (neg)
 	{
 		num = num * -1;
