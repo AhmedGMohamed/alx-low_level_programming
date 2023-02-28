@@ -18,6 +18,7 @@ int _atoi(char *s)
 			neg = !neg;
 		} else if (s[len] == '+' || s[len] == ' ')
 		{
+			len++;
 			continue;
 		}
 		else if (s[len] >= '0' && s[len] <= '9')
