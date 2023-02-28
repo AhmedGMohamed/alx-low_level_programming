@@ -24,7 +24,7 @@ int _atoi(char *s)
 		else if (s[len] >= '0' && s[len] <= '9')
 		{
 			num = num + (s[len] - '0');
-			if (s[len + 1] != '\0')
+			if (s[len + 1] != '\0' && (s[len] >= '0' && s[len] <= '9'))
 			{
 				num = num * 10;
 			}
