@@ -16,15 +16,23 @@ int _atoi(char *s)
 		if (s[len] == '-')
 		{
 			neg = !neg;
-		} else if (s[len] == '+' || s[len] == ' ')
+		}
+		else if (s[len] == '+' || s[len] == ' ')
 		{
 			len++;
 			continue;
 		}
 		else if (s[len] >= '0' && s[len] <= '9')
 		{
-			num = num + (s[len] - '0');
-			if (s[len + 1] != '\0' && (s[len] >= '0' && s[len] <= '9'))
+			if (neg)
+			{
+				num = num - (s[len] - '0');
+			}
+			else
+			{
+				num = num + (s[len] - '0');
+			}
+			if (s[len + 1] != '\0' && (s[len + 1] >= '0' && s[len + 1] <= '9'))
 			{
 				num = num * 10;
 			}
@@ -38,10 +46,6 @@ int _atoi(char *s)
 			}
 		}
 		len++;
-	}
-	if (neg)
-	{
-		num = num * -1;
 	}
 	return (num);
 }
