@@ -9,7 +9,7 @@
 
 int _atoi(char *s)
 {
-	int len = 0, num = 0, neg = 0;
+	int len = 0, num = 0, neg = 0, st = 0;
 
 	while (s[len] != '\0')
 	{
@@ -24,10 +24,14 @@ int _atoi(char *s)
 		{
 			num = num + (s[len] - '0');
 			num = num * 10;
+			st = 1;
 		}
 		else
 		{
-			break;
+			if (st)
+			{
+				break;
+			}
 		}
 		len++;
 	}
