@@ -9,7 +9,7 @@
 
 char *leet(char *s)
 {
-	char enc[17] = "aA4eE3oO0tT7lL7";
+	char enc[17] = "aA4eE3oO0tT7lL1";
 	int len = 0, i;
 
 	while (s[len] != '\0')
