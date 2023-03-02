@@ -36,7 +36,7 @@ char *cap_string(char *s)
 				cap = 1;
 				break;
 		}
-		if (s[len + 1] >= 'a' && s[len] <= 'z' && cap == 1)
+		if (s[len + 1] >= 'a' && s[len + 1] <= 'z' && cap == 1)
 		{
 			s[len + 1] = s[len + 1] - 32;
 		}
