@@ -32,13 +32,13 @@ char *rot13(char *s)
 	len = _strlen(s);
 	for (i = 0; i < len; i++)
 	{
-		if (s[i] >= 'a' && s[i] <= 'z' && s[i] - 'a' < 13 ||
-			s[i] >= 'A' && s[i] <= 'Z' && s[i] - 'A' < 13)
+		if ((s[i] >= 'a' && s[i] <= 'z' && s[i] - 'a' < 13) ||
+		   	(s[i] >= 'A' && s[i] <= 'Z' && s[i] - 'A' < 13))
 		{
 			s[i] = s[i] + 13;
 		}
-		else if (s[i] >= 'a' && s[i] <= 'z' && s[i] - 'a' >= 13 ||
-			s[i] >= 'A' && s[i] <= 'Z' && s[i] - 'A' >= 13)
+		else if ((s[i] >= 'a' && s[i] <= 'z' && s[i] - 'a' >= 13) ||
+			(s[i] >= 'A' && s[i] <= 'Z' && s[i] - 'A' >= 13))
 		{
 			s[i] = s[i] - 13;
 		}
