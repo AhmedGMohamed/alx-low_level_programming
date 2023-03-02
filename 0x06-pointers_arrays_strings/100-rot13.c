@@ -1,23 +1,5 @@
 #include "main.h"
-
-/**
- * _strlen - returns the length of a string
- * @str: the string to check
- *
- * Return: n - the length of the string
- */
-
-int _strlen(char *str)
-{
-	int len = 0;
-
-	while (str[len] != '\0')
-	{
-		len++;
-	}
-	return (len);
-}
-
+#include <stdio.h>
 /**
  * rot13 - encodes a string in rot13 encoding
  * @s: the string to encode
@@ -27,21 +9,24 @@ int _strlen(char *str)
 
 char *rot13(char *s)
 {
-	int i, len;
+	int i = 0, j, ch, f = 0;
 
-	len = _strlen(s);
-	for (i = 0; i < len; i++)
+	while (s[i] != '\0')
 	{
 		if ((s[i] >= 'a' && s[i] <= 'z' && s[i] - 'a' < 13) ||
 			(s[i] >= 'A' && s[i] <= 'Z' && s[i] - 'A' < 13))
 		{
 			s[i] = s[i] + 13;
+			i++;
+			continue;
 		}
-		else if ((s[i] >= 'a' && s[i] <= 'z' && s[i] - 'a' >= 13) ||
-			(s[i] >= 'A' && s[i] <= 'Z' && s[i] - 'A' >= 13))
+		ch = s[i];
+		for(j = 'A'; ch >= 'A' && ch <= 'z' && s[i] - 12 != j; j++)
 		{
-			s[i] = s[i] - 13;
+			ch = j;
 		}
+		s[i] = ch;
+		i++;
 	}
 	return (s);
 }
