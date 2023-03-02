@@ -113,6 +113,10 @@ char *infinite_add(char *n1, char *n2, char *r, int n)
 	int len1, len2, sum, size = n;
 
 	len1 = _strlen(n1), len2 = _strlen(n2), r = init_arr(r, n), n = n - 2;
+	if (len1 >= n || len2 >= n)
+	{
+		return (0);
+	}
 	while (len1 >= 0 && len2 >= 0 && n >= 0)
 	{
 		sum = 0;
