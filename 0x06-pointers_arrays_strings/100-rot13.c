@@ -9,7 +9,7 @@
 
 char *rot13(char *s)
 {
-	int i = 0, j, ch, f = 0;
+	int i = 0, j, ch;
 
 	while (s[i] != '\0')
 	{
@@ -21,7 +21,7 @@ char *rot13(char *s)
 			continue;
 		}
 		ch = s[i];
-		for(j = 'A'; ch >= 'A' && ch <= 'z' && s[i] - 12 != j; j++)
+		for (j = 'A'; ch >= 'A' && ch <= 'z' && s[i] - 12 != j; j++)
 		{
 			ch = j;
 		}
