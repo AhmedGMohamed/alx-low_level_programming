@@ -17,4 +17,6 @@ char *init_arr(char *, int);
 char *calc_carry(int *, char *, int);
 char *shift_arry(char *, int);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
+void print_buffer(char *b, int size);
+
 #endif
