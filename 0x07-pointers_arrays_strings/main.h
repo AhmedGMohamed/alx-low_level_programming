@@ -6,5 +6,6 @@ char *_memcpy(char *, char *, unsigned int);
 char *_strchr(char *, char);
 int _strlen(char *);
 unsigned int _strspn(char *s, char *accept);
+char *_strpbrk(char *, char *);
 
 #endif
