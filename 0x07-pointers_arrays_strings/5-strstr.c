@@ -32,8 +32,13 @@ char *_strstr(char *haystack, char *needle)
 	for (i = 0; i < len1; i++)
 	{
 		found = 1;
-		for (j = 0; j < len2 && i + len2 < len1; j++)
+		for (j = 0; j < len2; j++)
 		{
+			if (i + len2 >= len1)
+			{
+				found = 0;
+				break;
+			}
 			if (haystack[i + j] != needle[j])
 			{
 				found = 0;
