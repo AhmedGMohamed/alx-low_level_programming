@@ -3,7 +3,7 @@
  * factorial - Finds the factorial of a number
  * @n: the number to find the factorial of
  *
- * Return: n - the current length of the string
+ * Return: the factorial of the current number
  */
 int factorial(int n)
 {
