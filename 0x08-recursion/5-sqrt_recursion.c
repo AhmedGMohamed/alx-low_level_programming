@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * find_sqrt - Operation to find square root
  * @n: the root number
@@ -9,7 +8,7 @@
  */
 int find_sqrt(int n, int sq)
 {
-	if (sq <= 0)
+	if (sq > n / 2)
 	{
 		return (-1);
 	}
@@ -19,7 +18,7 @@ int find_sqrt(int n, int sq)
 	}
 	else
 	{
-		return (find_sqrt(n, sq - 1));
+		return (find_sqrt(n, sq + 1));
 	}
 }
 /**
@@ -42,7 +41,7 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-		sqrt = find_sqrt(n, n / 2);
+		sqrt = find_sqrt(n, 2);
 		if (sqrt == -1)
 		{
 			return (-1);
