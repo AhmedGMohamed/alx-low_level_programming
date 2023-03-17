@@ -180,6 +180,7 @@ int main(int argc, char *argv[])
 		|| (argv[2][0] == '0' && len2 == 1))
 	{
 		_putchar('0');
+		_putchar('\n');
 		return (0);
 	}
 	if (!(is_valid(argv[1]) && is_valid(argv[2]))
