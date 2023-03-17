@@ -43,10 +43,7 @@ int is_valid(char *s)
 	{
 		if (*s >= '0' && *s <= '9')
 			return (is_valid(++s));
-		else
-		{
-			return (0);
-		}
+		return (0);
 	}
 	return (1);
 }
@@ -186,7 +183,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 	if (!(is_valid(argv[1]) && is_valid(argv[2]))
-		|| len1 == 0 && len2 == 0)
+		&& (len1 == 0 || len2 == 0))
 	{
 		print_str("Error\n", 0);
 		exit(98);
