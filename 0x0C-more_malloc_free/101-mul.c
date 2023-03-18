@@ -92,6 +92,8 @@ char *rem_trailing(char *arr, int len)
 	if (arr[st] != '0')
 	{
 		final = malloc(sizeof(char) * (len - st + 1));
+		if (final == NULL)
+			return (NULL);
 		while (arr[st + i] != '\0')
 		{
 			final[i] = arr[st + i];
@@ -102,6 +104,8 @@ char *rem_trailing(char *arr, int len)
 	else
 	{
 		final = malloc(sizeof(char) * 2);
+		if (final == NULL)
+			return (NULL);
 		final[0] = '0';
 		final[1] = '\0';
 	}
@@ -134,6 +138,8 @@ char *mul(char *s1, char *s2, int len1, int len2)
 	int i, j, max = len1 + len2;
 	char *res = malloc(max + 1);
 
+	if (res == NULL)
+		return (NULL);
 	init_arr(res, max);
 	for (i = 0; i < len1; i++)
 	{
@@ -192,6 +198,11 @@ int main(int argc, char *argv[])
 		res = mul(argv[1], argv[2], len1, len2);
 	else
 		res = mul(argv[2], argv[1], len2, len1);
+	if (res == NULL)
+	{
+		print_str("Error\n", 0);
+		exit(98);
+	}
 	print_str(res, neg);
 	_putchar('\n');
 	free(res);
