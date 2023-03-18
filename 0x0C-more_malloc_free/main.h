@@ -7,6 +7,8 @@ void *_calloc(unsigned int, unsigned int);
 int *array_range(int, int);
 void *_realloc(void *, unsigned int, unsigned int);
 int _strlen(char *);
+int checks(int, char**);
+int check_zero(char *);
 void print_str(char *, int);
 int is_valid(char *);
 void init_arr(char *, int);

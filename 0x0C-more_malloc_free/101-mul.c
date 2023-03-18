@@ -16,6 +16,40 @@ int _strlen(char *s)
 	}
 	return (i);
 }
+int checks(int argc, char *argv[])
+{
+	int len1, len2, neg = 0;
+
+	if (argc != 3)
+	{
+		print_str("Error\n", 0);
+		exit(98);
+	}
+	if (argv[1][0] == '-')
+	{
+		neg = !neg;
+		argv[1]++;
+	}
+	if (argv[2][0] == '-')
+	{
+		neg = !neg;
+		argv[2]++;
+	}
+	len1 = _strlen(argv[1]), len2 = _strlen(argv[2]);
+	if (check_zero(argv[1]) || check_zero(argv[2]))
+	{
+		_putchar('0');
+		_putchar('\n');
+		exit (0);
+	}
+	if (!(is_valid(argv[1]) && is_valid(argv[2]))
+		|| len1 == 0 || len2 == 0)
+	{
+		print_str("Error\n", 0);
+		exit(98);
+	}
+	return (neg);
+}
 /**
  * check_zero - checks if the number is zero
  * @s - the string number to check
@@ -179,34 +213,8 @@ int main(int argc, char *argv[])
 	int len1, len2, neg = 0;
 	char *res;
 
-	if (argc != 3)
-	{
-		print_str("Error\n", 0);
-		exit(98);
-	}
-	if (argv[1][0] == '-')
-	{
-		neg = !neg;
-		argv[1]++;
-	}
-	if (argv[2][0] == '-')
-	{
-		neg = !neg;
-		argv[2]++;
-	}
+	neg = checks(argc, argv);
 	len1 = _strlen(argv[1]), len2 = _strlen(argv[2]);
-	if (check_zero(argv[1]) || check_zero(argv[2]))
-	{
-		_putchar('0');
-		_putchar('\n');
-		return (0);
-	}
-	if (!(is_valid(argv[1]) && is_valid(argv[2]))
-		|| len1 == 0 || len2 == 0)
-	{
-		print_str("Error\n", 0);
-		exit(98);
-	}
 	if (len1 >= len2)
 		res = mul(argv[1], argv[2], len1, len2);
 	else
@@ -216,8 +224,7 @@ int main(int argc, char *argv[])
 		print_str("Error\n", 0);
 		exit(98);
 	}
-	print_str(res, neg);
-	_putchar('\n');
+	print_str(res, neg), _putchar('\n');
 	free(res);
 	return (0);
 }
