@@ -16,6 +16,13 @@ int _strlen(char *s)
 	}
 	return (i);
 }
+/**
+ * checks - checks validity of numbers and number sign
+ * @argc: the number of arguments passed to the program
+ * @argv: an array of strings containing the arguments passed
+ *
+ * Return: 1 if the number is negative & valid, 0 otherwise
+ */
 int checks(int argc, char *argv[])
 {
 	int len1, len2, neg = 0;
@@ -40,7 +47,7 @@ int checks(int argc, char *argv[])
 	{
 		_putchar('0');
 		_putchar('\n');
-		exit (0);
+		exit(0);
 	}
 	if (!(is_valid(argv[1]) && is_valid(argv[2]))
 		|| len1 == 0 || len2 == 0)
@@ -52,7 +59,7 @@ int checks(int argc, char *argv[])
 }
 /**
  * check_zero - checks if the number is zero
- * @s - the string number to check
+ * @s: the string number to check
  *
  * Return: 1 if the number is zero, 0 otherwise
  */
