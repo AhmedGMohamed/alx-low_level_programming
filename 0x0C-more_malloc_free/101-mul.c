@@ -194,5 +194,6 @@ int main(int argc, char *argv[])
 		res = mul(argv[2], argv[1], len2, len1);
 	print_str(res, neg);
 	_putchar('\n');
+	free(res);
 	return (0);
 }
