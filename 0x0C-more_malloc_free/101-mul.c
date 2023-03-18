@@ -17,6 +17,20 @@ int _strlen(char *s)
 	return (i);
 }
 /**
+ * check_zero - checks if the number is zero
+ * @s - the string number to check
+ *
+ * Return: 1 if the number is zero, 0 otherwise
+ */
+int check_zero(char *s)
+{
+	if (*s == '\0')
+		return (1);
+	if (*s == '0')
+		return (check_zero(++s));
+	return (0);
+}
+/**
  * print_str - prints a given string (optimized for numbers)
  * @s: the string to print
  * @neg: (in case of number string) indicates the sign of a number
@@ -181,8 +195,7 @@ int main(int argc, char *argv[])
 		argv[2]++;
 	}
 	len1 = _strlen(argv[1]), len2 = _strlen(argv[2]);
-	if ((argv[1][0] == '0' && len1 == 1)
-		|| (argv[2][0] == '0' && len2 == 1))
+	if (check_zero(argv[1]) || check_zero(argv[2]))
 	{
 		_putchar('0');
 		_putchar('\n');
