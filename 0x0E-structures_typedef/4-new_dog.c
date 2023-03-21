@@ -24,7 +24,7 @@ int _strlen(char *s)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int len, i;
+	int len;
 	char *new_name, *new_owner;
 	dog_t *new_dog = malloc(sizeof(dog_t));
 
