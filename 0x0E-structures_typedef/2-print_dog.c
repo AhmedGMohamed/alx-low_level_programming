@@ -1,6 +1,10 @@
 #include "dog.h"
 #include <stdlib.h>
 #include <stdio.h>
+/**
+ * print_dog - prints a dog struct data
+ * @d: the struct tot print
+ */
 void print_dog(struct dog *d)
 {
 	if (d != NULL)
