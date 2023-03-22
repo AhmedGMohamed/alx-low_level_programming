@@ -5,10 +5,10 @@
  * @size: the size of the array
  * @cmp: the checker's function pointer
  * Description: finds the first elements which if passed to the supplied
- * 	function does not return 0
+ *	function does not return 0
  *
  * Return: -1 if no element matches or if size <= 0
- * 	   otherwise, ind - the index of the first element match
+ *	otherwise, ind - the index of the first element match
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
