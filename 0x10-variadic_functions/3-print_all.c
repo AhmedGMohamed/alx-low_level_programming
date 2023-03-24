@@ -58,7 +58,7 @@ void print_all(const char * const format, ...)
 	while (i < len && prntd < prnt)
 	{
 		ent = 0;
-		switch (format[i])
+/*		switch (format[i])
 		{
 		case 'c':
 			print_c(va_arg(args, int));
@@ -77,7 +77,7 @@ void print_all(const char * const format, ...)
 			prntd++, ent++;
 			break;
 		}
-		if (ent && prntd != prnt)
+*/		if (ent && prntd != prnt)
 			printf(", ");
 		i++;
 	}
