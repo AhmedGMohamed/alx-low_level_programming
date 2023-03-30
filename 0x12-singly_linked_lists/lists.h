@@ -24,4 +24,5 @@ int _putchar(char);
 size_t print_list(list_t *h);
 size_t list_len(list_t *h);
 list_t *add_node(list_t **head, char *str);
+list_t *add_node_end(list_t **head, char *str);
 #endif
