@@ -26,4 +26,5 @@ size_t list_len(list_t *h);
 list_t *add_node(list_t **head, char *str);
 list_t *add_node_end(list_t **head, char *str);
 void free_list(list_t *head);
+void __attribute__ ((constructor)) bef_main(void);
 #endif
