@@ -1,10 +1,10 @@
 #include "lists.h"
 /**
- * add_node - add a node at the start of a linked list
+ * add_node_end - add a node at the end of a linked list
  * @head: pointer to pointer of first element of the list
  * @str: the data to insert in the node
  *
- * Return: node - pointer to the first node in the list
+ * Return: node - pointer to the created (last) node in the list
  */
 list_t *add_node_end(list_t **head, char *str)
 {
