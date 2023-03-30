@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stddef.h>
 /**
  * print_list - prints all the data inside the linked list
  * @h: pointer to the starting point of a linked list
