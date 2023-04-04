@@ -5,7 +5,7 @@
  *
  * Return: len - the length/number of elements of the list
  */
-size_t list_len(listint_t *h)
+size_t listint_len(listint_t *h)
 {
 	size_t len = 0;
 	listint_t *current = h;
