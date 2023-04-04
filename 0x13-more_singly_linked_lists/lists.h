@@ -5,14 +5,13 @@
 #include <stdlib.h>
 #include <stddef.h>
 /**
- * list_t - typedef for list type
+ * listint_t - typedef for list type
  */
 typedef struct listint listint_t;
 /**
- * struct list - A node for a linked list
- * @str: a string
- * @len: the length of the string
- * @next: pointer to the next element in the linked list
+ * struct listint - A node for a linked list
+ * @n: a number (data)
+ * @next: pointer to the next node in the linked list
  */
 struct listint
 {
