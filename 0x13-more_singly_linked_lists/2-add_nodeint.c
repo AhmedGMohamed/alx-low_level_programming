@@ -2,7 +2,7 @@
 /**
  * add_node - add a node at the start of a linked list
  * @head: pointer to pointer of first element of the list
- * @str: the data to insert in the node
+ * @n: number (data) for the node
  *
  * Return: node - pointer to the first node in the list
  */
