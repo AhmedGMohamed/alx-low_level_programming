@@ -9,7 +9,6 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int tmp = n;
 	int bit;
 
 	bit = (n >> index) - ((n >> (index + 1) << 1));
