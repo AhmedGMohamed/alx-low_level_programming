@@ -6,7 +6,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int tmp = n, dig, num = 1;
+	unsigned long int tmp = n, dig;
 	long int len = 0;
 
 	if (n == 0)
