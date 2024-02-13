@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * create_array - dynamically allocates an initialized array of charaters
+ * create_array - dynamically allocates an initialized array of characters
  * @size: the size of the array
  * @c: the character to initialize the array with
  *
