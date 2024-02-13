@@ -6,14 +6,14 @@
  *
  * Return: the length of the string
  */
- int _strlen(char *str)
- {
-	 int len = 0;
-	 
-	 while(str[len] != '\0')
-		 len++;
-	return(len);
- }
+int _strlen(char *str)
+{
+	int len = 0;
+
+	while (str[len] != '\0')
+		len++;
+	return (len);
+}
 
 /**
  * create_file - creates and fils a file/truncates if the file already exists
@@ -22,8 +22,8 @@
  *
  * Return: 1 on success, otherwise returns -1
  */
- int create_file(const char *filename, char *text_content)
- {
+int create_file(const char *filename, char *text_content)
+{
 	int fd, len = 0, written;
 
 	if (filename == NULL)
@@ -33,8 +33,8 @@
 		return (fd);
 	if (text_content != NULL)
 		len = _strlen(text_content);
- 	written = write(fd, text_content, len);
+	written = write(fd, text_content, len);
 	if (written == -1)
 		return (written);
 	return (1);
- }
+}
